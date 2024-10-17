@@ -1,0 +1,244 @@
+/*------------------------------------------------------*/
+/*  RESET                                               */
+
+html, body, figure, section, ul, li, span, p {
+    padding: 0;
+    margin: 0; 
+
+}
+ul {
+    text-decoration: none;
+    list-style: none;
+}
+a {
+    text-decoration: none;
+}
+
+/*------------------------------------------------------*/
+/*  MACRO                                               */
+
+@font-face {
+    font-family: 'IdealSans'; /*a name to be used later*/
+    src: url('/assets/fonts/IdealSans-Thin-Pro.otf'); /*URL to font*/
+}
+
+html {
+    box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    border-top: 3px solid cornflowerblue; /*FF006A pinky*/
+    font-size: 1rem;
+    font-weight: 1000;
+    color: black;
+    font-family:'IdealSans', 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+html, body {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+/*------------------------------------------------------*/
+/*  MARGIN - PADDING                                    */
+
+.ml-1 {
+    margin-left: 1rem;
+}
+.ml-2 {
+    margin-left: 2rem;
+}
+.mr-1 {
+    margin-right: 1rem;
+}
+.mr-2 {
+    margin-right: 2rem;
+}
+.pl-1 {
+    padding-left: 1rem;
+}
+.pl-2 {
+    padding-left: 2rem;
+}
+.pr-1 {
+    padding-right: 1rem;
+}
+.pr-2 {
+    padding-right: 2rem;
+}
+/*------------------------------------------------------*/
+/*  FLEX CONTAINERS                                     */
+
+.flex {
+    display: flex;
+}
+.flex-row {
+    display: flex;
+    flex-direction: row;
+}
+.flex-col {
+    display: flex;
+    flex-direction: column;
+}
+.justify-center {
+    justify-content: center;
+}
+.align-center {
+    align-items: center;
+}
+.justify-start {
+    justify-content: start;
+}
+
+/*------------------------------------------------------*/
+/*  HEADER - NAV - MENU                                 */
+
+header {
+    height: auto;
+    background: linear-gradient(#d9e7ff, #effaff, #ffffff);
+    /*
+    background: linear-gradient(#eff5ff, #f3fbff8c, #ffffff);
+    */
+}
+.campus {
+    margin-left: 4rem;
+}
+.logo figure img {
+    height: 4rem;
+    padding: 0.5rem;
+}
+.logo h1 {
+    font-size: 2.5rem;
+    font-weight: 1000;
+}
+.h1-logo {
+    background: -webkit-linear-gradient(45deg, #3a32b2, #00e680  100%); /*1dff00*/
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+.logo-blue {
+    color:#3a32b2;
+}
+.logo-green {
+    color: #00e680 ;
+}
+.logo-blue2 {
+    color:#2161b3ff;
+}
+.logo-green2 {
+    color: #1d9754ff ;
+}
+nav .menu-nav li {
+    padding: 0 0.5rem 0 0.5rem;
+}
+nav .menu-nav li a {
+    padding: 0.5rem 1rem 0.5rem 1rem;
+    font-size: 1.2rem;
+    border-radius: 0.5rem;
+}
+nav .menu-nav li a:hover {
+    background-color: rgb(150, 190, 190);
+    color: white;
+}
+nav .menu-nav li a:active {
+    background-color: cornflowerblue;
+    color: white;
+}
+/*------------------------------------------------------*/
+/*  MAIN - SECTIONS - CARDS                             */
+
+main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex: 1;
+}
+section {
+    transition: opacity 0.5s ease-in-out;
+}
+.card {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    border-radius: 1rem;
+    margin: 2rem;
+    padding: 1rem;
+    flex: 1;
+}
+section h1 {
+    font-size: 1.7rem;
+    text-align: center;
+    text-decoration-line: underline;
+    text-decoration-thickness: from-font;
+    text-underline-offset: 0.3rem;
+}
+section div {
+    padding: 0 3rem 0 3rem;   
+}
+section p {
+    font-size: 1.4rem;
+    line-height: 2.2rem;
+    font-weight: 600;
+    text-align: justify;
+}
+.figure-l figure {
+    float: left;
+    margin: 1rem;
+    width: auto;
+}
+.figure-r figure {
+    float: right;
+    margin: 1rem;
+    width: auto;
+}
+.card figure img {
+    width: 200px;
+}
+.hero {
+    width: 80%;
+    background-color: aliceblue;
+    box-shadow: 0.5rem 0.5rem 20px 0px #607D8B;
+    display: flex;
+}
+.card-1 {
+    width: 80%;
+    background-color: #c8efec;
+    box-shadow: 0.5rem 0.5rem 20px 0px #607D8B;
+    display: none;
+}
+.card-2 {
+    width: 80%;
+    background-color: transparent;
+    box-shadow: 0.5rem 0.5rem 20px 0px #607D8B;
+    display: none;
+}
+.card-3 {
+    width: 80%;
+    background-color: #e6e6e6;
+    box-shadow: 0.5rem 0.5rem 20px 0px #607D8B;
+    display: none;
+}
+
+/*------------------------------------------------------*/
+/*  FOOTER                                              */
+
+footer {
+    /*background-color: black;*/
+    color: black;
+    padding: 1.5rem;
+    margin-top: auto;
+}
+footer .menu-nav li {
+    font-size: 0.75rem;
+    padding: 0 0.5rem 0 0.5rem;
+}
+footer .menu-nav li a {
+    text-decoration: none;
+    padding: 0.5rem;
+    border-radius: 1rem;
+}
+footer .menu-nav li a:hover {
+    background-color: gray;
+    color: white;
+}

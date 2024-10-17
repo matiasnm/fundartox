@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Fundartox</title>
+        <link href='https://fonts.googleapis.com/css?family=Work Sans' rel='stylesheet'></link>
+        <link type="text/css" href="./assets/styles/style.css" rel="stylesheet"></link>
+    </head>
+    <body>
+        <header>
+            <nav class="flex-row align-center justify-center">
+                <div class="logo flex-row align-center justify-start">
+                    <figure>
+                        <img src="./assets/logo/fundartox-logo-happy.svg" alt="Fundartox">
+                    </figure>
+                    <h1 class="h1-logo">FUNDARTOX</h1>
+                </div>
+                <div class="wrapper ml-2"></div>
+                <ul class="flex-row align-center menu-nav">
+                    <li><a href="#">NOSOTROS</a></li>
+                    <li><a href="#">SERVICIOS</a></li>
+                    <li><a href="#">NOTICIAS</a></li>
+                    <li><a href="#">CONTACTO</a></li>
+                    <li class="campus"><a target="_blank" rel="noopener" href="http://campusvirtual.fundartox.org">CAMPUS</a></li>
+                </ul>
+            </nav>
+        </header>
+
+        <main>
+            <section class="card figure-l hero">
+                <h1>PRESENTACIÓN PRINCIPAL</h1>
+                <div>
+                <figure>
+                    <img src="./assets/img/Forest-bro.png">
+                </figure>
+                <p>
+                Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.
+                <br>
+                <br>
+                It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+                Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old.
+                </p>
+                </div>
+            </section>
+
+            <section class="card figure-r card-1">
+                <h1>RECORTE DE SERVICIOS</h1>
+                <div>
+                <figure>
+                    <img src="./assets/img/Nature-bro.png">
+                </figure>
+                <p>
+                Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.
+                <br>
+                <br>
+                It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+                Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old.
+                </p></div>
+            </section>
+            
+            <section class="card figure-r card-2">
+                <h1>RECORTE DE NOVEDADES</h1>
+                <div>
+                <figure>
+                    <img src="./assets/img/Flying bird-bro.png">
+                </figure>
+                <p>
+                Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.
+                <br>
+                <br>
+                It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+                Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old.
+                </p>
+                </div>
+            </section>
+
+            <section class="card figure-l card-3">
+                <h1>OTRAS COSAS ?</h1>
+                <div>
+                <figure>
+                    <img src="./assets/img/prickly pear cactus-bro.png">
+                </figure>
+                <p>
+                Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.
+                <br>
+                <br>
+                It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+                Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old.
+                </p>
+                </div>
+            </section>
+        </main>
+        <footer class="flex-row justify-center">
+            <ul class="flex-row align-center menu-nav">
+                <li><a href="#">Noticias</a></li>
+                <li><a href="#">Dónde Estamos</a></li>
+                <li><a href="#">Contacto</a></li>
+                <li> - </li>
+                <li><a href="#">Link Tree</a></li>
+                <li><a href="#">Instagram</a></li>
+                <li><a href="#">Facebook</a></li>
+            </ul>
+        </footer>
+    <script>
+        let sections = document.getElementsByTagName('section');
+        let currentSectionIndex = 0;
+
+        function switchSection(n) {
+            sections[currentSectionIndex].style.opacity = 0;
+            next = Math.abs(currentSectionIndex + n) % sections.length;
+            sections[next].style.opacity = 0;
+            setTimeout(() => {
+                sections[currentSectionIndex].style.display = "none";
+                sections[currentSectionIndex].style.opacity = 1;
+            }, 400);
+            setTimeout(() => {
+                currentSectionIndex = next;
+                sections[currentSectionIndex].style.display = "flex";
+            }, 500);
+            setTimeout(() => {
+                sections[currentSectionIndex].style.opacity = 1;
+            }, 600);
+        }
+
+        document.addEventListener("wheel", e => {
+            if (e.wheelDeltaY > 0) {
+                switchSection(-1);
+            } else if (e.wheelDeltaY < 0) {
+                switchSection(+1);
+            }
+        });
+        
+        document.addEventListener("keydown", e => {
+            switch(e.code) {
+                case "ArrowUp":
+                    switchSection(-1);
+                    break;
+                case "PageUp":
+                    switchSection(-1);
+                    break;
+                case "ArrowDown":
+                    switchSection(+1);
+                    break;
+                case "PageDown":
+                    switchSection(+1);
+                    break;
+            }
+        })
+
+    </script>
+
+    </body>
+</html>
