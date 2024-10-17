@@ -19,7 +19,7 @@ a {
 
 @font-face {
     font-family: 'IdealSans'; /*a name to be used later*/
-    src: url('./assets/fonts/IdealSans-Thin-Pro.otf'); /*URL to font*/
+    src: url('/assets/fonts/IdealSans-Thin-Pro.otf'); /*URL to font*/
 }
 
 html {
