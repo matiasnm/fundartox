@@ -18,8 +18,8 @@ a {
 /*  MACRO                                               */
 
 @font-face {
-    font-family: 'IdealSans'; /*a name to be used later*/
-    src: url('/fundartox/assets/fonts/IdealSans-Thin-Pro.otf'); /*/assets/fonts/IdealSans-Thin-Pro.otf*/
+    font-family: 'IdealSans'; 
+    src: url('/fundartox/assets/fonts/IdealSans-Thin-Pro.otf'); /*/fundartox/*/
 }
 
 html {
@@ -136,6 +136,7 @@ nav .menu-nav li a {
     padding: 0.5rem 1rem 0.5rem 1rem;
     font-size: 1.2rem;
     border-radius: 0.5rem;
+    color: black;
 }
 nav .menu-nav li a:hover {
     background-color: rgb(150, 190, 190);
