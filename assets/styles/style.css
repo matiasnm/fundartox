@@ -19,7 +19,7 @@ a {
 
 @font-face {
     font-family: 'IdealSans'; /*a name to be used later*/
-    src: url('/fundartox/assets/fonts/IdealSans-Thin-Pro.otf'); /*URL to font*/
+    src: url('/fundartox/tree/main/assets/fonts/IdealSans-Thin-Pro.otf'); /*/assets/fonts/IdealSans-Thin-Pro.otf*/
 }
 
 html {
@@ -30,7 +30,7 @@ html {
     font-size: 1rem;
     font-weight: 1000;
     color: black;
-    font-family:'IdealSans', 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-family:'IdealSans', 'Math', sans-serif;
 }
 
 html, body {
