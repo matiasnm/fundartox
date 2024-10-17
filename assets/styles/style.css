@@ -19,7 +19,7 @@ a {
 
 @font-face {
     font-family: 'IdealSans'; /*a name to be used later*/
-    src: url('/fundartox/tree/main/assets/fonts/IdealSans-Thin-Pro.otf'); /*/assets/fonts/IdealSans-Thin-Pro.otf*/
+    src: url('/fundartox/assets/fonts/IdealSans-Thin-Pro.otf'); /*/assets/fonts/IdealSans-Thin-Pro.otf*/
 }
 
 html {
