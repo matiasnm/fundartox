@@ -24,7 +24,7 @@
 
 @font-face {
     font-family: 'IdealSans'; 
-    src: url('/fundartox/assets/fonts/IdealSans-Thin-Pro.otf'); /*/fundartox/*/
+    src: url('/assets/fonts/IdealSans-Thin-Pro.otf'); /*/fundartox/*/
 }
 
 html {
@@ -205,6 +205,10 @@ nav .menu-nav li a:active {
 /*------------------------------------------------------*/
 /*  MAIN - SECTIONS - CARDS                             */
 
+#section-about, #section-services, #section-news, #section-contact {
+    display: none;
+}
+
 main {
     display: flex;
     flex-direction: column;
@@ -223,18 +227,21 @@ section {
     padding: 1rem;
     flex: 1;
 }
-section h1 {
-    font-size: 1.7rem;
+.hero h1 {
+    background-color: transparent;
+    margin: 0;
+    padding-top: 0.2rem;
+    padding-bottom: 0.1rem;
     text-align: center;
 }
 section .card.figure-l.hero div {
     padding: 0 3rem 0 3rem;   
 }
-section p {
-    font-size: 1.4rem;
-    line-height: 2.2rem;
-    font-weight: 600;
+.hero p {
     text-align: justify;
+    margin-top: 1.5rem;
+    font-size: 1.5rem;
+    line-height: 1.75rem;
 }
 /* !!!!!!!!!!!!!!!!!!!!!!!!!!!! */
 /* !!!!!!!!!!!!!!!!!!!!!!!!!!!! */
