@@ -1,47 +1,77 @@
 /*------------------------------------------------------*/
 /*  RESET                                               */
 
-html, body, figure, section, ul, li, span, p {
+* {
     padding: 0;
-    margin: 0; 
-
-}
-ul {
+    margin: 0;
+    border: none;
     text-decoration: none;
     list-style: none;
-}
-a {
     text-decoration: none;
 }
 
+* {
+    margin: 0;
+    padding: 0;
+}
+@media all {
+    html, body {
+        overflow-x: hidden;
+    }
+}
 /*------------------------------------------------------*/
 /*  MACRO                                               */
 
 @font-face {
     font-family: 'IdealSans'; 
-    src: url('/fundartox/assets/fonts/IdealSans-Thin-Pro.otf'); /*/fundartox/*/
+    src: url('/assets/fonts/IdealSans-Thin-Pro.otf'); /*/fundartox/*/
 }
 
 html {
     box-sizing: border-box;
     -moz-box-sizing: border-box;
     -webkit-box-sizing: border-box;
-    border-top: 3px solid cornflowerblue; /*FF006A pinky*/
+    border-top: 0.5vh solid cornflowerblue; /*FF006A pinky*/
+    box-sizing: border-box;
     font-size: 1rem;
     font-weight: 1000;
     color: black;
     font-family:'IdealSans', 'Math', sans-serif;
+    letter-spacing: 0.1rem;
 }
 
 html, body {
     width: 100%;
-    height: 100vh;
+    min-height: 99.6vh;
     display: flex;
     flex-direction: column;
 }
 
+p {
+    hyphens: auto;
+    letter-spacing: 0.05rem;
+}
+
+textarea {
+    resize: none;
+    font-size: 1rem;
+    font-family: var(--text-font);
+    border-radius: 0.5rem;
+    border: 1px solid;
+    background-color: transparent;
+    padding: 1rem;
+}
+
+input {
+    font-size: 1rem;
+    font-family: var(--text-font);
+    border-radius: 0.5rem;
+    border: 1px solid;
+    background-color: transparent;
+    padding: 1rem;
+}
 /*------------------------------------------------------*/
-/*  MARGIN - PADDING                                    */
+/*  MARGIN - PADDING - WIDTH                            */
 
 .ml-1 {
     margin-left: 1rem;
@@ -55,6 +85,21 @@ html, body {
 .mr-2 {
     margin-right: 2rem;
 }
+.mb-1 {
+    margin-bottom: 1rem;
+}
+.mb-2 {
+    margin-bottom: 2rem;
+}
+.mt-1 {
+    margin-top: 1rem;
+}
+.mt-2 {
+    margin-top: 2rem;
+}
+.mt-3 {
+    margin-top: 3rem;
+}
 .pl-1 {
     padding-left: 1rem;
 }
@@ -66,6 +111,12 @@ html, body {
 }
 .pr-2 {
     padding-right: 2rem;
+}
+.w-75 {
+    width: 75%;
+}
+.w-50 {
+    width: 50%;
 }
 /*------------------------------------------------------*/
 /*  FLEX CONTAINERS                                     */
@@ -101,9 +152,6 @@ header {
     background: linear-gradient(#eff5ff, #f3fbff8c, #ffffff);
     */
 }
-.campus {
-    margin-left: 4rem;
-}
 .logo figure img {
     height: 4rem;
     padding: 0.5rem;
@@ -111,6 +159,7 @@ header {
 .logo h1 {
     font-size: 2.5rem;
     font-weight: 1000;
+    letter-spacing: 0;
 }
 .h1-logo {
     background: -webkit-linear-gradient(45deg, #3a32b2, #00e680  100%); /*1dff00*/
@@ -146,6 +195,13 @@ nav .menu-nav li a:active {
     background-color: cornflowerblue;
     color: white;
 }
+.campus {
+    margin-left: 4rem;
+}
+.campus a {
+    background-color: rgb(150, 190, 190);
+    color:black;
+}
 /*------------------------------------------------------*/
 /*  MAIN - SECTIONS - CARDS                             */
 
@@ -170,11 +226,8 @@ section {
 section h1 {
     font-size: 1.7rem;
     text-align: center;
-    text-decoration-line: underline;
-    text-decoration-thickness: from-font;
-    text-underline-offset: 0.3rem;
 }
-section div {
+section .card.figure-l.hero div {
     padding: 0 3rem 0 3rem;   
 }
 section p {
@@ -183,16 +236,25 @@ section p {
     font-weight: 600;
     text-align: justify;
 }
+/* !!!!!!!!!!!!!!!!!!!!!!!!!!!! */
+/* !!!!!!!!!!!!!!!!!!!!!!!!!!!! */
+/* !!!!!!!!!!!!!!!!!!!!!!!!!!!! */
 .figure-l figure {
     float: left;
     margin: 1rem;
     width: auto;
 }
+/* !!!!!!!!!!!!!!!!!!!!!!!!!!!! */
+/* !!!!!!!!!!!!!!!!!!!!!!!!!!!! */
+/* !!!!!!!!!!!!!!!!!!!!!!!!!!!! */
 .figure-r figure {
     float: right;
     margin: 1rem;
     width: auto;
 }
+/* !!!!!!!!!!!!!!!!!!!!!!!!!!!! */
+/* !!!!!!!!!!!!!!!!!!!!!!!!!!!! */
+/* !!!!!!!!!!!!!!!!!!!!!!!!!!!! */
 .card figure img {
     width: 200px;
 }
@@ -222,12 +284,85 @@ section p {
 }
 
 /*------------------------------------------------------*/
+/*  OTHER PAGES                                         */
+.about, .contact, .services, .news {
+    width: 75%;
+    padding-left: 5rem;
+    padding-right: 5rem;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+}
+.about h1, .contact h1, .services h1, .news h1 {
+    background-color: beige;
+    margin: 0;
+    padding-top: 0.2rem;
+    padding-bottom: 0.1rem;
+}
+.about h2, .contact h2, .services h2, .news h2 {
+    margin-top: 2rem;
+    text-decoration: underline;
+    text-decoration-thickness: from-font;
+    text-underline-offset: 0.3rem;
+}
+.about h3, .contact h3, .services h3, .news h3 {
+    background-color: beige;
+    margin-top: 1.5rem;
+    font-size: 1.25rem;
+    line-height: 1.75rem;
+}
+.about p, .contact p, .services p, .news p {
+    margin-top: 1.5rem;
+    font-size: 1.25rem;
+    line-height: 1.75rem;
+}
+
+.about li {
+    font-size: 1.25rem;
+    line-height: 1.75rem;
+}
+.about .colaboradores li {
+    list-style: disc;
+    margin-bottom: 0.5rem;
+    margin-left: 1rem;
+}
+.about figure img, .services figure img, .news figure img{
+    border-radius: 2rem;
+}
+.contact-form {
+    padding-top: 3rem;
+}
+.btn {
+    width: fit-content;
+    align-self: center;
+    padding: 0.5rem 1rem 0.5rem 1rem;
+    border-radius: 0.5rem;
+    font-size: 1.2rem;
+    letter-spacing: 0.1rem;
+    font-family: 'IdealSans';
+    font-weight: 1000;
+    background-color: transparent;
+}
+.btn a {
+    background-color: rgb(150, 190, 190);
+    color: black;
+    padding: 0.5rem 1rem 0.5rem 1rem;
+    border-radius: 0.5rem;
+}
+.btn a:hover {
+    color: white;
+}
+.btn a:active {
+    background-color: cornflowerblue;
+    color: white;
+}
+
+/*------------------------------------------------------*/
 /*  FOOTER                                              */
 
 footer {
-    /*background-color: black;*/
+    background-color: #607d8b0e;
     color: black;
-    padding: 1.5rem;
+    padding: 1rem;
     margin-top: auto;
 }
 footer .menu-nav li {
@@ -237,9 +372,9 @@ footer .menu-nav li {
 footer .menu-nav li a {
     text-decoration: none;
     padding: 0.5rem;
-    border-radius: 1rem;
+    border-radius: 0.5rem;
 }
 footer .menu-nav li a:hover {
-    background-color: gray;
-    color: white;
+    background-color: lightgrey;
+    color: black;
 }
