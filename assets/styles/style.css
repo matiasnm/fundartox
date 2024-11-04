@@ -304,6 +304,7 @@ section .card.figure-l.hero div {
     margin: 0;
     padding-top: 0.2rem;
     padding-bottom: 0.1rem;
+    text-align: center;
 }
 .about h2, .contact h2, .services h2, .news h2 {
     margin-top: 2rem;
