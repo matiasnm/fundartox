@@ -202,10 +202,10 @@ input {
     font-size: 2rem;
 }
 .color-blue {
-    background-color: #26b0d0;
+    background-color: #56a8a8;
 }
 .color-beige {
-    background-color: #26b0d0;
+    background-color: #56a8a8;
 }
 .color-green {
     background-color: rgb(150, 190, 190);
@@ -373,7 +373,7 @@ section .card.figure-l.hero div {
     margin-bottom: 1rem;
 }
 .about h1, .contact h1, .services h1, .news h1, .home h1 {
-    background-color: #26b0d0;
+    background-color: #56a8a8;
     border-radius: 1rem;
     margin: 0;
     padding-top: 0.2rem;
@@ -387,7 +387,7 @@ section .card.figure-l.hero div {
     text-underline-offset: 0.3rem;
 }
 .about h3, .contact h3, .services h3, .news h3, .home h3 {
-    background-color: #26b0d0;
+    background-color: #56a8a8;
     margin-top: 1.5rem;
     font-size: 1.25rem;
     line-height: 1.75rem;
