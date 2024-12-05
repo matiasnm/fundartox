@@ -2,7 +2,10 @@
 <html>
     <head>
         <title>Fundartox</title>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
         <link rel="icon" type="image/x-icon" href="./assets/favicon/favicon.ico">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+        <script src="./assets/scripts/script.js"></script>
         <link type="text/css" href="./assets/styles/style.css" rel="stylesheet"></link>
     </head>
     <body>
@@ -13,86 +16,66 @@
                         <img src="./assets/logo/fundartox-logo-happy.svg" alt="Fundartox">
                     </figure>
                     <h1 class="h1-logo">
-                        <a id="home" href="#">FUNDARTOX</a>
+                        <a id="home" title="Home" href="#">FUNDARTOX</a>
                     </h1>
                 </div>
                 <div class="wrapper ml-2"></div>
                 <ul class="flex-row align-center menu-nav">
-                    <li><a id="about" href="#">NOSOTROS</a></li>
-                    <li><a id="services" href="#">SERVICIOS</a></li>
-                    <li><a id="news" href="#">NOTICIAS</a></li>
-                    <li><a id="contact" href="#">CONTACTO</a></li>
-                    <li class="campus"><a target="_blank" rel="noopener" href="http://campusvirtual.fundartox.org">CAMPUS</a></li>
+                    <li><a id="about" title="Nosotros" href="#">NOSOTROS</a></li>
+                    <li><a id="services" title="Servicios" href="#">SERVICIOS</a></li>
+                    <li><a id="news" title="Noticias" href="#">NOTICIAS</a></li>
+                    <li><a id="contact" title="Contacto" href="#">CONTACTO</a></li>
+                    <li class="campus"><a title="Campus" target="_blank" rel="noopener" href="http://campusvirtual.fundartox.org">CAMPUS</a></li>
                 </ul>
             </nav>
         </header>
 
         <main>
-            <section id="section-home" class="card figure-l hero">
-                <h1>PRINCIPAL</h1>
-                <div class="pl-2 pr-2">
-                <figure class="pl-2">
-                    <img src="./assets/img/Forest-bro.png">
-                </figure>
-                <div class="pl-2 pr-2">
-                    <p>
-                        Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.
-                        <br>
-                        <br>
-                        It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
-                        Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old.
-                        </p>
-                </div>
-                </div>
-            <!--
-            <section class="card figure-r card-1">
-                <h1>RECORTE DE SERVICIOS</h1>
-                <div>
-                <figure>
-                    <img src="./assets/img/Nature-bro.png">
-                </figure>
-                <p>
-                Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.
-                <br>
-                <br>
-                It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
-                Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old.
-                </p></div>
-            </section>
-            
-            <section class="card figure-r card-2">
-                <h1>RECORTE DE NOVEDADES</h1>
-                <div>
-                <figure>
-                    <img src="./assets/img/Flying bird-bro.png">
-                </figure>
-                <p>
-                Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.
-                <br>
-                <br>
-                It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
-                Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old.
-                </p>
+            <section id="section-home" class="card home">
+                <div class="flex-row justify-between align-center gap-1">
+
+                    <!-- Text-->
+                    <div class="flex-col flex-1 pr-1">
+                        <!-- Presentation Text presentation-text -->
+                        <div class="">
+                            <p>Bienvenidos a la web de <span class="span-logo">Fundartox</span></p>
+                            <p>Renovamos el estilo y la página web. Encontrá todas las novedades de la fundación en la sección de Noticias.</p>
+                            <p>Fundartox surge con el objetivo de articular la experiencia profesional desarrollada en el ámbito de la toxicología médica en beneficio de la comunidad.</p>
+                            <p>Fue creada para difundir, elaborar e implementar actividades de promoción, prevención, diagnóstico, asistencia, docencia e investigación, vinculadas a la Toxicología.</p>
+                        </div>
+                    </div>
+
+                    <!-- Logo <h1>FUNDACIÓN NIÑOS SIN TÓXICOS</h1> -->
+                    <div class="flex-col flex-0 text-center p-2">
+                        <figure>
+                            <img src="./assets/logo/fundartox-logo-happy-fit.svg" alt="Site Logo" class="site-logo" />
+                        </figure>
+                        <span class="span-logo font-size-20 pt-2">FUNDARTOX</span>
+                        <span class="span-logo font-size-14 pt-1">Fundación Niños<br>Sin Tóxicos</span>
+                    </div>
+
+                    <!-- Featured -->
+                    <div class="flex-col flex-1 pl-4">
+                        <!-- Presentation Text presentation-text -->
+                        <div class="gallery">
+                            <div class="gallery-item">
+                                <a>
+                                    <img src="./assets/img/Flying bird-bro.png">
+                                    <h3>ITEM 1</h3>
+                                </a>
+                            </div>
+                            <div class="gallery-item">
+                                <a>
+                                    <img src="./assets/img/cherry tree-bro.png">
+                                    <h3>ITEM 2</h3>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
                 </div>
             </section>
 
-            <section class="card figure-l card-3">
-                <h1>OTRAS COSAS ?</h1>
-                <div>
-                <figure>
-                    <img src="./assets/img/prickly pear cactus-bro.png">
-                </figure>
-                <p>
-                Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.
-                <br>
-                <br>
-                It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
-                Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old.
-                </p>
-                </div>
-            </section>-->
-            </section>
-            
             <section id="section-about" class="card about">
                 <h1>NOSOTROS</h1>
 
@@ -182,42 +165,7 @@
                 </p>
 
                 <div class="mt-3"></div>
-                <!--
-                <p>
-                Fabricio Castellano
-                Médico especialista en Toxicología
-                </p>
-
-                <p>
-                Adriana Macias
-                Ostéopata O. D. Miembro del Registro de Osteópatas de Argentina
-                </p>
-
-                <p>
-                Pedro Reyes
-                Médico Especialista en Psiquiatría. Magister en Psiconeuroinmunoendocrinología
-                </p>
-
-                <p>
-                Claudia Aguirre
-                Licencia en investigación operativa. Coordinadora de Formación Virtual de la Plataforma educativa
-                </p>
-                
-                <p>
-                César Andrés Muñoz
-                Técnico superior en cardiología. Representa a FUNDARTOX en la comisión directiva del Foro del Sector Social
-                </p>
-                
-                <p>
-                Claudia Guerra
-                Contadora
-                </p>
-                
-                <p>
-                Gustavo Gabriel Osman Fagale
-                Abogado – Asesor letrado
-                </p>
-                -->
+            
             </section>
 
             <section id="section-services" class="card services">
@@ -246,8 +194,8 @@
                         (médica, farmacológica, alimentaria, legal) de nuevos productos o el estudio de sus
                         insumos.
                     </p>
-                    <figure class="pl-2 pr-2">
-                        <img src="./assets/img/Forest-bro.png">
+                    <figure class="pl-2 pr-2 mt-1">
+                        <img src="./assets/img/Fundartox-2.webp">
                     </figure>
                 </div>
                 <p>
@@ -260,8 +208,8 @@
                 </p>
                 
                 <div class="flex-row mt-1 align-center">
-                    <figure class="pl-2 pr-2">
-                        <img src="./assets/img/Forest-bro.png">
+                    <figure class="pl-2 pr-2 mt-1">
+                        <img src="./assets/img/Fundartox-4.webp">
                     </figure>
                     <p>
                         En 2015 Fundartox firmó un convenio con la Organización de Estados Americanos para
@@ -299,8 +247,8 @@
                     actividad de todos los inviernos, junto a otras organizaciones científicas y de la sociedad
                     civil.
                     </p>
-                    <figure class="pl-2 pr-2">
-                        <img src="./assets/img/Forest-bro.png">
+                    <figure class="pl-2 pr-2 mt-1">
+                        <img src="./assets/img/personal growth-bro.png">
                     </figure>
                 </div>
 
@@ -309,10 +257,51 @@
             </section>
             
             <section id="section-news" class="card news">
-                <h1>NOTICIAS</h1>
-                
-                <div class="mt-3"></div>
+                <h1 class="h1-news">&nbsp;
+                    <div class="title">NOTICIAS</div>
+                    <button class="search-button" title="Buscar" id="search">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="1rem" height="1rem" fill="currentColor" class="bi bi-search" viewBox="0 0 16 16">
+                            <path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001q.044.06.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1 1 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0"/>
+                        </svg>
+                    </button>
+                </h1>
 
+                <!-- Spinner -->
+                <div id="spinner-overlay" class="spinner-overlay" style="display: none;">
+                    <div class="spinner"></div>
+                </div>
+
+                <!-- Modal -->
+                <div id="searchModal" class="modal">
+                    <div class="modal-content">
+                        <span class="close">&times;</span>
+                        <!--<h1>Buscar Noticias</h1> -->
+                        <input type="text" id="searchInput" placeholder="Ingrese su búsqueda..." />
+                        <button id="searchSubmit">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="1rem" height="1rem" fill="currentColor" class="bi bi-search" viewBox="0 0 16 16">
+                            <path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001q.044.06.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1 1 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0"/>
+                            </svg>
+                        </button>
+                    </div>
+                </div>
+
+                <div id="gallery" class="gallery"></div>
+                
+                <div class="flex-row align-center justify-center pagination">
+                    <button id="prevPage" title="Anterior" disabled>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="1rem" height="1rem" fill="currentColor" class="bi bi-chevron-double-left" viewBox="0 0 16 16">
+                            <path fill-rule="evenodd" d="M8.354 1.646a.5.5 0 0 1 0 .708L2.707 8l5.647 5.646a.5.5 0 0 1-.708.708l-6-6a.5.5 0 0 1 0-.708l6-6a.5.5 0 0 1 .708 0"/>
+                            <path fill-rule="evenodd" d="M12.354 1.646a.5.5 0 0 1 0 .708L6.707 8l5.647 5.646a.5.5 0 0 1-.708.708l-6-6a.5.5 0 0 1 0-.708l6-6a.5.5 0 0 1 .708 0"/>
+                          </svg>
+                    </button>
+                    <span class="pl-2"></span>
+                    <button id="nextPage" title="Siguiente">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="1rem" height="1rem" fill="currentColor" class="bi bi-chevron-double-right" viewBox="0 0 16 16">
+                            <path fill-rule="evenodd" d="M3.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L9.293 8 3.646 2.354a.5.5 0 0 1 0-.708"/>
+                            <path fill-rule="evenodd" d="M7.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L13.293 8 7.646 2.354a.5.5 0 0 1 0-.708"/>
+                          </svg>
+                    </button>
+                </div>
             </section>
 
             <section id="section-contact" class="card contact">
@@ -342,13 +331,14 @@
         </main>
         <footer class="flex-row justify-center">
             <ul class="flex-row align-center menu-nav">
-                <li><a href="#">Noticias</a></li>
-                <li><a href="#">Dónde Estamos</a></li>
-                <li><a href="#">Contacto</a></li>
+                <li><a id="home-footer" title="Home" href="#">Home</a></li>
+                <li><a id="news-footer" title="Noticias" href="#">Noticias</a></li>
+                <li><a title="Dónde Estamos" target="_blank" href="https://maps.app.goo.gl/1dm9JtR4hTSk3KKH7">Dónde Estamos</a></li>
+                <li><a id="contact-footer" title="Contacto" href="#">Contacto</a></li>
                 <li> - </li>
-                <li><a href="#">Link Tree</a></li>
-                <li><a href="#">Instagram</a></li>
-                <li><a href="#">Facebook</a></li>
+                <li><a title="Instagram" target="_blank" href="https://www.instagram.com/fundartox/">Instagram</a></li>
+                <li><a title="Facebook" target="_blank" href="https://www.facebook.com/Fundartox/">Facebook</a></li>
+                <li><a title="X" target="_blank" href="https://x.com/fundartox">X (Twitter)</a></li>
             </ul>
         </footer>
         <!--
@@ -399,40 +389,5 @@
         })
 
     </script>-->
-    <script>
-        let menuHome = document.getElementById("home");
-        let menuAbout = document.getElementById("about");
-        let menuServices = document.getElementById("services")
-        let menuNews = document.getElementById("news");
-        let menuContact = document.getElementById("contact");
-
-        let sectionHome = document.getElementById("section-home");
-        let sectionAbout = document.getElementById("section-about");
-        let sectionServices = document.getElementById("section-services")
-        let sectionNews = document.getElementById("section-news");
-        let sectionContact = document.getElementById("section-contact");
-
-        menuHome.addEventListener("click", menuClick);
-        menuAbout.addEventListener("click", menuClick);
-        menuServices.addEventListener("click", menuClick);
-        menuNews.addEventListener("click", menuClick);
-        menuContact.addEventListener("click", menuClick);
-
-        function displaySection(id) {
-            sectionHome.style.display = "none";
-            sectionAbout.style.display = "none";
-            sectionServices.style.display = "none";
-            sectionNews.style.display = "none";
-            sectionContact.style.display = "none";
-            document.getElementById("section-" + id).style.display = "block";
-            scroll(0,0);
-        }
-
-        function menuClick(ev) {
-          ev.preventDefault();
-          displaySection(ev.target.id);
-        }
-
-    </script>
     </body>
 </html>

@@ -24,7 +24,7 @@
 
 @font-face {
     font-family: 'IdealSans'; 
-    src: url('/fundartox/assets/fonts/IdealSans-Thin-Pro.otf'); /*/fundartox/*/
+    src: url('/assets/fonts/IdealSans-Thin-Pro.otf'); /*/fundartox/*/
 }
 
 html {
@@ -100,11 +100,23 @@ input {
 .mt-3 {
     margin-top: 3rem;
 }
+.p-1 {
+    padding: 1rem;
+}
+.p-2 {
+    padding: 2rem;
+}
 .pl-1 {
     padding-left: 1rem;
 }
 .pl-2 {
     padding-left: 2rem;
+}
+.pl-3 {
+    padding-left: 3rem;
+}
+.pl-4 {
+    padding-left: 4rem;
 }
 .pr-1 {
     padding-right: 1rem;
@@ -112,11 +124,23 @@ input {
 .pr-2 {
     padding-right: 2rem;
 }
+.pt-1 {
+    padding-top: 1rem;
+}
+.pt-2 {
+    padding-top: 2rem;
+}
 .w-75 {
     width: 75%;
 }
 .w-50 {
     width: 50%;
+}
+.w-40 {
+    width: 40%;
+}
+.w-30 {
+    width: 30%;
 }
 /*------------------------------------------------------*/
 /*  FLEX CONTAINERS                                     */
@@ -141,7 +165,39 @@ input {
 .justify-start {
     justify-content: start;
 }
-
+.justify-between {
+    justify-content: space-between;
+}
+.gap-1 {
+    gap: 1rem;
+}
+.flex-0 {
+    flex: 0;
+}
+.flex-1 {
+    flex: 1;
+}
+.text-center {
+    text-align: center;
+}
+.font-size-10 {
+    font-size: 1rem;
+}
+.font-size-12 {
+    font-size: 1.2rem;
+}
+.font-size-14 {
+    font-size: 1.4rem;
+}
+.font-size-16 {
+    font-size: 1.6rem;
+}
+.font-size-18 {
+    font-size: 1.8rem;
+}
+.font-size-20 {
+    font-size: 2rem;
+}
 /*------------------------------------------------------*/
 /*  HEADER - NAV - MENU                                 */
 
@@ -165,6 +221,11 @@ header {
     background: -webkit-linear-gradient(45deg, #3a32b2, #00e680  100%); /*1dff00*/
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
+}
+.span-logo {
+    background: -webkit-linear-gradient(45deg, #3a32b2, #00e680  100%); /*1dff00*/
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent; 
 }
 .logo-blue {
     color:#3a32b2;
@@ -231,7 +292,7 @@ section {
     background-color: transparent;
     margin: 0;
     padding-top: 0.2rem;
-    padding-bottom: 0.1rem;
+    padding-bottom: 0.2rem;
     text-align: center;
 }
 section .card.figure-l.hero div {
@@ -292,40 +353,45 @@ section .card.figure-l.hero div {
 
 /*------------------------------------------------------*/
 /*  OTHER PAGES                                         */
-.about, .contact, .services, .news {
+.about, .contact, .services, .news, .home {
     width: 75%;
     padding-left: 5rem;
     padding-right: 5rem;
     margin-top: 1rem;
     margin-bottom: 1rem;
 }
-.about h1, .contact h1, .services h1, .news h1 {
+.about h1, .contact h1, .services h1, .news h1, .home h1 {
     background-color: beige;
+    border-radius: 1rem;
     margin: 0;
     padding-top: 0.2rem;
-    padding-bottom: 0.1rem;
+    padding-bottom: 0.2rem;
+    text-align: center;
 }
-.about h2, .contact h2, .services h2, .news h2 {
+.about h2, .contact h2, .services h2, .news h2, .home h2  {
     margin-top: 2rem;
     text-decoration: underline;
     text-decoration-thickness: from-font;
     text-underline-offset: 0.3rem;
 }
-.about h3, .contact h3, .services h3, .news h3 {
+.about h3, .contact h3, .services h3, .news h3, .home h3 {
     background-color: beige;
     margin-top: 1.5rem;
     font-size: 1.25rem;
     line-height: 1.75rem;
+    border-radius: 1rem;
 }
-.about p, .contact p, .services p, .news p {
+.about p, .contact p, .services p, .news p, .home p {
     margin-top: 1.5rem;
     font-size: 1.25rem;
     line-height: 1.75rem;
+    text-align: justify;
 }
 
 .about li {
     font-size: 1.25rem;
     line-height: 1.75rem;
+    text-align: left;
 }
 .about .colaboradores li {
     list-style: disc;
@@ -369,7 +435,7 @@ section .card.figure-l.hero div {
 footer {
     background-color: #607d8b0e;
     color: black;
-    padding: 1rem;
+    padding: 0.5rem;
     margin-top: auto;
 }
 footer .menu-nav li {
@@ -379,9 +445,183 @@ footer .menu-nav li {
 footer .menu-nav li a {
     text-decoration: none;
     padding: 0.5rem;
-    border-radius: 0.5rem;
 }
 footer .menu-nav li a:hover {
     background-color: lightgrey;
     color: black;
+}
+/* !!!!!!!!!!!!!!!!!!!!!!!!!!!! */
+/* !!!!!!!!!!!!!!!!!!!!!!!!!!!! */
+/* !!!!!!!!!!!!!!!!!!!!!!!!!!!! */
+.gallery {
+    margin-top: 2rem;
+    padding-bottom: 1rem;
+    display: grid;
+    gap: 1rem; 
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+}
+.gallery-item {
+    border-radius: 1rem;
+    overflow: hidden;
+    text-align: center;
+    background-color: transparent;
+}
+div .gallery-item a {
+    text-decoration: none;
+}
+div .gallery-item a:hover {
+    text-decoration: underline;
+    color: black;
+}
+.gallery-item img {
+    border-radius: 1rem;
+    width: 100%;
+    min-height: 180px;
+    height: 180px;
+    min-width: 230px;
+    width: 230px;
+    display: block;
+}
+.gallery-item h3 {
+    margin: 0;
+    background-color: transparent;
+    color: black;
+    text-align: left;
+    padding: 0.5rem;
+    font-size: 1rem;
+    white-space: nowrap; /* Prevent wrapping to a new line */
+    overflow: hidden; /* Hide the overflowed text */
+    text-overflow: ellipsis; /* Add ellipsis (...) to indicate overflow */
+    max-width: 100%; /* Ensure the element doesn’t exceed its container width */
+}
+.pagination button {
+    display: flex;
+    flex-wrap: wrap;
+    align-content: center;
+    padding: 1rem;
+    background-color: transparent;
+    color: black;
+}
+.pagination button:hover {
+    color: white;
+    border-radius: 1rem;
+    background-color: rgb(150, 190, 190);
+}
+.pagination button:active {
+    color: white;
+    background-color: cornflowerblue;
+}
+.h1-news {
+    display: flex;
+    align-items: center; /* Vertically center items */
+    justify-content: space-between; /* Space between title and button */
+    position: relative; /* Allow absolute centering */
+}
+.title {
+    position: absolute; /* Absolute positioning allows true centering */
+    left: 50%; /* Start at the horizontal center */
+    transform: translateX(-50%); /* Adjust for the title width */
+    font-size: 24px; /* Optional: adjust font size */
+    white-space: nowrap; /* Prevent wrapping */
+}
+.search-button {
+    margin-left: auto; /* Push the button to the far right */
+    background-color: transparent; /* Optional: button styling */
+    display: flex;
+    align-items: center;
+    gap: 5px; /* Space between icon and text */
+}
+.search-button {
+    border-radius: 1rem;
+    margin-right: 1rem;
+    padding: 0.5rem;
+}
+.search-button:hover svg {
+    color:white;
+}
+.search-button:hover {
+    background-color: rgb(150, 190, 190);
+}
+.search-button:active {
+    background-color: cornflowerblue;
+}
+
+/* Modal Overlay */
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
+}
+/* Modal Content */
+.modal-content {
+    display: flex;
+    flex-direction: row;
+    background-color: #ffffffde;
+    margin: 15% auto; /* Center vertically */
+    padding: 1rem;
+    border-radius: 1rem;
+    width: 80%; /* Adjust width as needed */
+    max-width: 400px; /* Limit maximum width */
+    text-align: center; /* Center text in modal */
+}
+.modal-content .close {
+  position: absolute;
+  right: 10px;
+  top: 10px;
+  font-size: 1rem;
+  cursor: pointer;
+}
+.modal-content input {
+  width: 90%;
+  padding: 1rem;
+  border: none;
+  background-color: white;
+}
+.modal-content button {
+    margin-left: 1rem;
+    background-color: rgb(150, 190, 190);
+    color: black;
+    border: none;
+    padding: 1rem;
+    border-radius: 1rem;
+    cursor: pointer;
+}
+.modal-content button:hover {
+    color:white;
+}
+.modal-content button:active {
+    background-color: cornflowerblue;
+    color: white;
+}
+
+/* Spinner overlay */
+.spinner-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+}
+.spinner {
+    border: 4px solid #f3f3f3;
+    border-top: 4px solid cornflowerblue;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    animation: spin 1s linear infinite;
+}
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
 }
