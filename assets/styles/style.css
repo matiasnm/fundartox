@@ -24,7 +24,7 @@
 
 @font-face {
     font-family: 'IdealSans'; 
-    src: url('/fundartox/assets/fonts/IdealSans-Thin-Pro.otf'); /*/fundartox/*/
+    src: url('/assets/fonts/IdealSans-Thin-Pro.otf'); /*/fundartox/*/
 }
 
 html {
@@ -168,6 +168,9 @@ input {
 .justify-between {
     justify-content: space-between;
 }
+.items-center {
+    justify-items: center;
+}
 .gap-1 {
     gap: 1rem;
 }
@@ -197,6 +200,15 @@ input {
 }
 .font-size-20 {
     font-size: 2rem;
+}
+.color-blue {
+    background-color: beige;
+}
+.color-beige {
+    background-color: cornflowerblue;
+}
+.color-green {
+    background-color: rgb(150, 190, 190);
 }
 /*------------------------------------------------------*/
 /*  HEADER - NAV - MENU                                 */
@@ -366,7 +378,6 @@ section .card.figure-l.hero div {
     margin: 0;
     padding-top: 0.2rem;
     padding-bottom: 0.2rem;
-    padding-bottom: 0.1rem;
     text-align: center;
 }
 .about h2, .contact h2, .services h2, .news h2, .home h2  {
