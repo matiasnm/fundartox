@@ -365,11 +365,8 @@ section .card.figure-l.hero div {
     border-radius: 1rem;
     margin: 0;
     padding-top: 0.2rem;
-<<<<<<< HEAD
     padding-bottom: 0.2rem;
-=======
     padding-bottom: 0.1rem;
->>>>>>> b60a16d2723c1b7c040933b5dc4183c772ce1319
     text-align: center;
 }
 .about h2, .contact h2, .services h2, .news h2, .home h2  {
@@ -454,7 +451,6 @@ footer .menu-nav li a:hover {
     background-color: lightgrey;
     color: black;
 }
-<<<<<<< HEAD
 /* !!!!!!!!!!!!!!!!!!!!!!!!!!!! */
 /* !!!!!!!!!!!!!!!!!!!!!!!!!!!! */
 /* !!!!!!!!!!!!!!!!!!!!!!!!!!!! */
@@ -630,5 +626,3 @@ div .gallery-item a:hover {
     0% { transform: rotate(0deg); }
     100% { transform: rotate(360deg); }
 }
-=======
->>>>>>> b60a16d2723c1b7c040933b5dc4183c772ce1319
