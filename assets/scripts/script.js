@@ -203,6 +203,7 @@ async function fetchPosts(page = 1, query = '') {
     hideSpinner();
   } catch (error) {
     console.error('Error fetching posts:', error);
+    renderEmptyGallery('Sin noticias para mostrar.');
     hideSpinner();
   }
 }
@@ -229,6 +230,12 @@ async function fetchFeaturedImage(mediaId) {
     console.error('Error fetching image:', error);
     return null;
   }
+}
+
+// Render empty gallery
+function renderEmptyGallery(msg) {
+  const galleryContainer = document.getElementById('gallery');
+  galleryContainer.innerHTML = `<p>${msg}</p>`;
 }
 
 // Render the gallery with posts
