@@ -24,7 +24,7 @@
 
 @font-face {
     font-family: 'IdealSans'; 
-    src: url('/fundartox/assets/fonts/IdealSans-Thin-Pro.otf'); /**/
+    src: url('/assets/fonts/IdealSans-Thin-Pro.otf'); /*/fundartox/*/
 }
 
 html {
@@ -72,7 +72,9 @@ input {
 }
 /*------------------------------------------------------*/
 /*  MARGIN - PADDING - WIDTH                            */
-
+.m-1 {
+    margin: 1rem;
+}
 .ml-1 {
     margin-left: 1rem;
 }
@@ -95,7 +97,7 @@ input {
     margin-top: 1rem;
 }
 .mt-2 {
-    margin-top: 2rem;
+    margin-top: 2rem!important;
 }
 .mt-3 {
     margin-top: 3rem;
@@ -105,6 +107,9 @@ input {
 }
 .p-2 {
     padding: 2rem;
+}
+.p-4 {
+    padding: 4rem;
 }
 .pl-1 {
     padding-left: 1rem;
@@ -193,7 +198,7 @@ input {
     font-size: 1.4rem;
 }
 .font-size-16 {
-    font-size: 1.6rem;
+    font-size: 1.6rem!important;
 }
 .font-size-18 {
     font-size: 1.8rem;
@@ -202,10 +207,7 @@ input {
     font-size: 2rem;
 }
 .color-blue {
-    background-color: #56a8a8;
-}
-.color-beige {
-    background-color: #56a8a8;
+    background-color: #76bccc;
 }
 .color-green {
     background-color: rgb(150, 190, 190);
@@ -373,7 +375,7 @@ section .card.figure-l.hero div {
     margin-bottom: 1rem;
 }
 .about h1, .contact h1, .services h1, .news h1, .home h1 {
-    background-color: #56a8a8;
+    background-color: #76bccc;
     border-radius: 1rem;
     margin: 0;
     padding-top: 0.2rem;
@@ -387,11 +389,12 @@ section .card.figure-l.hero div {
     text-underline-offset: 0.3rem;
 }
 .about h3, .contact h3, .services h3, .news h3, .home h3 {
-    background-color: #56a8a8;
+    background: linear-gradient(45deg, #76bccc, transparent);
     margin-top: 1.5rem;
     font-size: 1.25rem;
     line-height: 1.75rem;
-    border-radius: 1rem;
+    /*border-radius: 1rem;
+    background-color: #76bccc;*/
 }
 .about p, .contact p, .services p, .news p, .home p {
     margin-top: 1.5rem;
@@ -466,17 +469,22 @@ footer .menu-nav li a:hover {
 /* !!!!!!!!!!!!!!!!!!!!!!!!!!!! */
 /* !!!!!!!!!!!!!!!!!!!!!!!!!!!! */
 .gallery {
-    margin-top: 2rem;
-    padding-bottom: 1rem;
     display: grid;
-    gap: 1rem; 
+    gap: 2rem;
     grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+}
+.gallery h2 {
+    width: 100%;
+    text-align: center;
 }
 .gallery-item {
     border-radius: 1rem;
     overflow: hidden;
     text-align: center;
     background-color: transparent;
+    aspect-ratio: 4 / 3; 
+    position: relative; /* Enable absolute positioning for child elements */
+
 }
 div .gallery-item a {
     text-decoration: none;
@@ -486,25 +494,28 @@ div .gallery-item a:hover {
     color: black;
 }
 .gallery-item img {
-    border-radius: 1rem;
     width: 100%;
-    min-height: 180px;
-    height: 180px;
-    min-width: 230px;
-    width: 230px;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 1rem;
     display: block;
 }
 .gallery-item h3 {
+    position: absolute; /* Position it within the container */
+    bottom: 0; /* Align it to the bottom */
+    left: 0; /* Align it to the left edge */
+    width: 100%; /* Force it to span the full width of the container */
     margin: 0;
-    background-color: transparent;
-    color: black;
-    text-align: left;
     padding: 0.5rem;
+    background: rgba(0, 0, 0, 0.6); /* Add a semi-transparent background for readability */
+    color: #fff; /* White text for contrast */
     font-size: 1rem;
-    white-space: nowrap; /* Prevent wrapping to a new line */
-    overflow: hidden; /* Hide the overflowed text */
-    text-overflow: ellipsis; /* Add ellipsis (...) to indicate overflow */
-    max-width: 100%; /* Ensure the element doesn’t exceed its container width */
+    text-align: left;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    box-sizing: border-box; /* Ensure padding is included in width */
+    display: block; /* Ensure block-level behavior */
 }
 .pagination button {
     display: flex;
@@ -522,6 +533,10 @@ div .gallery-item a:hover {
 .pagination button:active {
     color: white;
     background-color: cornflowerblue;
+}
+.pagination button:disabled {
+    color: gray;
+    cursor:not-allowed;
 }
 .h1-news {
     display: flex;
@@ -546,18 +561,38 @@ div .gallery-item a:hover {
 .search-button {
     border-radius: 1rem;
     margin-right: 1rem;
-    padding: 0.5rem;
+    padding: 0.25rem;
 }
 .search-button:hover svg {
-    color:white;
+    background-color: white;
+    color:black;
 }
 .search-button:hover {
-    background-color: rgb(150, 190, 190);
+    background-color: white;
+    color:black;
 }
 .search-button:active {
-    background-color: cornflowerblue;
+    background-color: black;
+    color: white;
 }
+.search-button:active svg {
+    background-color: black;
+    color: white;
+}
+.search-results {
+    display: flex;
 
+}
+.search-results button {
+    color: black;
+    background: transparent;
+}
+.search-results button svg:hover {
+    background-color: black;
+}
+.search-results button svg:active {
+    color: cornflowerblue;
+}
 /* Modal Overlay */
 .modal {
     display: none; /* Hidden by default */
