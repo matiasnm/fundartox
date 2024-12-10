@@ -3,6 +3,7 @@
     <head>
         <title>Fundartox</title>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="icon" type="image/x-icon" href="./assets/favicon/favicon.ico">
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
         <script src="./assets/scripts/script.js"></script>
@@ -19,6 +20,9 @@
                         <a id="home" title="Home" href="#">FUNDARTOX</a>
                     </h1>
                 </div>
+                <button class="hamburger-menu" aria-label="Toggle menu">
+                    <a>☰</a>
+                </button>
                 <div class="wrapper ml-2"></div>
                 <ul class="flex-row align-center menu-nav">
                     <li><a id="about" title="Nosotros" href="#">NOSOTROS</a></li>
@@ -34,18 +38,6 @@
             <section id="section-home" class="card home">
                 <h1>HOME</h1>
                 <div class="flex-row justify-between gap-1">
-
-                    <!-- Text-->
-                    <div class="flex-col flex-1">
-                        <!-- Presentation Text presentation-text -->
-                        <div class="">
-                            <p class="font-size-16 mt-2">Bienvenidos a la web de <span class="span-logo">Fundartox</span></p>
-                            <p class="pr-2">Renovamos el estilo y la página web. Encontrá todas las novedades de la fundación en la sección de Noticias.</p>
-                            <p class="pr-2">Fundartox surge con el objetivo de articular la experiencia profesional desarrollada en el ámbito de la toxicología médica en beneficio de la comunidad.</p>
-                            <p class="pr-2">Fue creada para difundir, elaborar e implementar actividades de promoción, prevención, diagnóstico, asistencia, docencia e investigación, vinculadas a la Toxicología.</p>
-                        </div>
-                    </div>
-
                     <!-- Logo <h1>FUNDACIÓN NIÑOS SIN TÓXICOS</h1> -->
                     <div class="flex-col flex-0 text-center justify-center p-4">
                         <figure>
@@ -53,10 +45,17 @@
                         </figure>
                         <span class="span-logo font-size-20 pt-2">FUNDARTOX</span>
                     </div>
-
+                    <!-- Text-->
+                    <div class="flex-col flex-1">
+                        <div class="">
+                            <p class="font-size-16 mt-2">Bienvenidos a la web de <span class="span-logo">Fundartox</span></p>
+                            <p class="pr-2">Renovamos el estilo y la página web!</p> <!-- Encontrá todas las novedades de la fundación en la sección de Noticias.-->
+                            <p class="pr-2">Fundartox surge con el objetivo de articular la experiencia profesional desarrollada en el ámbito de la toxicología médica en beneficio de la comunidad.</p>
+                            <p class="pr-2">Fue creada para difundir, elaborar e implementar actividades de promoción, prevención, diagnóstico, asistencia, docencia e investigación, vinculadas a la Toxicología.</p>
+                        </div>
+                    </div>
                     <!-- Featured -->
                     <div class="flex-col flex-1">
-                        <!-- Presentation Text presentation-text -->
 
                         <div class="gallery items-center">
                             <h2>Novedades</h2>
@@ -119,10 +118,7 @@
                     </figure>
                 </div>
                 
-                <div class="flex-row mt-1 align-center">
-                    <figure class="pl-2 pr-2">
-                        <img src="./assets/img/about/Beatriz-Di-Biasi.png">
-                    </figure>
+                <div class="flex-row row-reverse mt-1 align-center">
                     <div>
                         <h3>
                         &nbsp;Beatriz Di Biasi - Directora Médica
@@ -134,6 +130,9 @@
                         Jefe de Unidad de Toxicología de Urgencias de la División Toxicología del Hospital Fernández de la Ciudad de Buenos Aires.
                         </p>
                     </div>
+                    <figure class="pl-2 pr-2">
+                        <img src="./assets/img/about/Beatriz-Di-Biasi.png">
+                    </figure>
                 </div>
 
                 <div class="flex-row mt-1 align-center">
@@ -209,10 +208,7 @@
                 analítica, toxicología regulatoria , toxicología experimental, toxicología genómica.
                 </p>
                 
-                <div class="flex-row mt-1 align-center">
-                    <figure class="pl-2 pr-2 mt-1">
-                        <img src="./assets/img/fundartox-2.webp">
-                    </figure>
+                <div class="flex-row row-reverse mt-1 align-center">
                     <p>
                         En 2015 Fundartox firmó un convenio con la Organización de Estados Americanos para
                         llevar adelante un Estudio internacional y multicéntrico sobre el impacto neurológico del
@@ -222,6 +218,9 @@
                         desarrollo institucional, incrementando la capacidad docente y desarrollando la
                         investigación científica, tecnológica, social y cultural».
                     </p>
+                    <figure class="pl-2 pr-2 mt-1">
+                        <img src="./assets/img/fundartox-2.webp">
+                    </figure>
                 </div>
                 
                 <h2>Docencia</h2>
@@ -347,7 +346,6 @@
                 <li><a id="news-footer" title="Noticias" href="#">Noticias</a></li>
                 <li><a title="Dónde Estamos" target="_blank" href="https://maps.app.goo.gl/1dm9JtR4hTSk3KKH7">Dónde Estamos</a></li>
                 <li><a id="contact-footer" title="Contacto" href="#">Contacto</a></li>
-                <li> - </li>
                 <li><a title="Instagram" target="_blank" href="https://www.instagram.com/fundartox/">Instagram</a></li>
                 <li><a title="Facebook" target="_blank" href="https://www.facebook.com/Fundartox/">Facebook</a></li>
                 <li><a title="X" target="_blank" href="https://x.com/fundartox">X (Twitter)</a></li>

@@ -19,12 +19,15 @@
         overflow-x: hidden;
     }
 }
+@media (max-width: 480px) {
+    html, body {font-size: 0.75rem!important;}
+}
 /*------------------------------------------------------*/
 /*  MACRO                                               */
 
 @font-face {
     font-family: 'IdealSans'; 
-    src: url('/fundartox/assets/fonts/IdealSans-Thin-Pro.otf'); /**/
+    src: url('/fundartox/assets/fonts/IdealSans-Thin-Pro.otf'); /*/fundartox/*/
 }
 
 html {
@@ -41,9 +44,11 @@ html {
 }
 
 html, body {
+    overflow-x: hidden;
     width: 100%;
     min-height: 99.6vh;
     display: flex;
+    align-items: center;
     flex-direction: column;
 }
 
@@ -157,6 +162,9 @@ input {
     display: flex;
     flex-direction: row;
 }
+.row-reverse {
+    flex-direction: row-reverse;
+}
 .flex-col {
     display: flex;
     flex-direction: column;
@@ -218,13 +226,23 @@ input {
 header {
     height: auto;
     background: linear-gradient(#d9e7ff, #effaff, #ffffff);
-    /*
-    background: linear-gradient(#eff5ff, #f3fbff8c, #ffffff);
-    */
+    width: 100%;
+    padding: 1rem 2rem;
+    box-sizing: border-box;
+}
+header nav {
+    width: 80%;
+    margin: auto;
+    padding-top: 1rem;
+}
+.logo {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: start;
 }
 .logo figure img {
-    height: 4rem;
-    padding: 0.5rem;
+    height: 3rem;
 }
 .logo h1 {
     font-size: 2.5rem;
@@ -253,20 +271,24 @@ header {
 .logo-green2 {
     color: #1d9754ff ;
 }
-nav .menu-nav li {
+.menu-nav {
+    display: flex;
+    gap: 1rem;
+}
+.menu-nav li {
     padding: 0 0.5rem 0 0.5rem;
 }
-nav .menu-nav li a {
+.menu-nav li a {
     padding: 0.5rem 1rem 0.5rem 1rem;
     font-size: 1.2rem;
     border-radius: 0.5rem;
     color: black;
 }
-nav .menu-nav li a:hover {
+.menu-nav li a:hover {
     background-color: rgb(150, 190, 190);
     color: white;
 }
-nav .menu-nav li a:active {
+.menu-nav li a:active {
     background-color: cornflowerblue;
     color: white;
 }
@@ -276,6 +298,131 @@ nav .menu-nav li a:active {
 .campus a {
     background-color: rgb(150, 190, 190);
     color:black;
+}
+.hamburger-menu {
+    display: none;
+    background-color: transparent;
+    font-size: 2rem;
+    background: none;
+    border: none;
+    cursor: pointer;
+    color: rgb(150, 190, 190);
+}
+.hamburger-menu a:hover {
+    color: white;
+    background-color: rgb(150, 190, 190);
+}
+.hamburger-menu a:active {
+    color: black;
+    background-color: rgb(150, 190, 190);
+}
+@media (min-width: 1024px) and (max-width: 1279px) {
+    .menu-nav li a {
+        font-size: 1rem;
+        padding: 0.4rem 0.8rem;
+    }
+
+    .logo h1 {
+        font-size: 2rem;
+    }
+    .menu-nav {
+        gap: 0.5rem;
+    }
+    .campus {
+        margin-left: 2rem;
+    }
+}
+/* Responsive adjustments */
+@media (max-width: 1024px) {
+    .menu-nav li a {
+        font-size: 1rem;
+        padding: 0.2rem 0.2rem;
+        letter-spacing: 0rem;
+    }
+    .wrapper {
+        margin-left: 1rem!important;
+    }
+    .logo h1 {
+        font-size: 1.8rem;
+    }
+    .menu-nav {
+        gap: 0.25rem;
+    }
+    .campus {
+        margin-left: 0rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .campus {
+        margin-left: 0;
+    }
+    .campus a {
+        background-color: transparent;
+    }
+    .menu-nav {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 2rem;
+        right: 0;
+        gap: 0.5rem;
+        background-color: white;
+        padding: 1rem;
+        z-index: 1000;
+        box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+    }
+    .menu-nav.show {
+        display: flex; /* Show the menu when toggled */
+    }
+
+    .hamburger-menu {
+        display: block; /* Show the hamburger menu */
+        padding-left: 1rem;
+    }
+    nav {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+}
+
+@media (max-width: 480px) {
+    .logo figure img {
+        height: 2.5rem;
+    }
+    .logo h1 {
+        font-size: 1.8rem;
+    }
+    .campus {
+        margin-left: 0;
+    }
+    .campus a {
+        background-color: transparent;
+    }
+    .menu-nav {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 2rem;
+        right: 0;
+        gap: 0.5rem;
+        background-color: white;
+        padding: 1rem;
+        z-index: 1000;
+        box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+    }
+    .menu-nav.show {
+        display: flex; /* Show the menu when toggled */
+    }
+
+    .hamburger-menu {
+        display: block; /* Show the hamburger menu */
+        padding-left: 1rem;
+    }
+    nav {
+        flex-direction: column;
+        align-items: flex-start;
+    }
 }
 /*------------------------------------------------------*/
 /*  MAIN - SECTIONS - CARDS                             */
@@ -374,6 +521,22 @@ section .card.figure-l.hero div {
     margin-top: 1rem;
     margin-bottom: 1rem;
 }
+@media (max-width: 1024px) {
+    .services div {
+        flex-direction: column;
+    }
+    .services img {
+        padding-top: 1rem;
+    }
+}
+@media (max-width: 768px) {
+    .about div {
+        flex-direction: column;
+    }
+    .about img {
+        padding-top: 1rem;
+    }
+}
 .about h1, .contact h1, .services h1, .news h1, .home h1 {
     background-color: #76bccc;
     border-radius: 1rem;
@@ -452,6 +615,7 @@ footer {
     color: black;
     padding: 0.5rem;
     margin-top: auto;
+    width: 100%;
 }
 footer .menu-nav li {
     font-size: 0.75rem;
@@ -464,6 +628,13 @@ footer .menu-nav li a {
 footer .menu-nav li a:hover {
     background-color: lightgrey;
     color: black;
+}
+footer .menu-nav li a:active {
+    background-color: lightgrey;
+    color: white;
+}
+@media (max-width: 768px) {
+    footer { display: none!important;}
 }
 /* !!!!!!!!!!!!!!!!!!!!!!!!!!!! */
 /* !!!!!!!!!!!!!!!!!!!!!!!!!!!! */

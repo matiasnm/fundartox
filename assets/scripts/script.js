@@ -5,6 +5,7 @@ document.addEventListener('DOMContentLoaded', initializeApp);
 
 function initializeApp() {
   setupNavigation();
+  setupHamburger();
   setupFooterNavigation();
   setupPaginationButtons();
   fetchPosts(currentPage);
@@ -103,6 +104,27 @@ function setupNavigation() {
   menuItems.forEach((item) => {
     const menu = document.getElementById(item);
     menu.addEventListener('click', (event) => handleMenuClick(event, item));
+  });
+}
+
+function setupHamburger() {
+  const hamburger = document.querySelector('.hamburger-menu');
+  const menu = document.querySelector('.menu-nav');
+
+  hamburger.addEventListener('click', () => {
+      menu.classList.toggle('show');
+  });
+
+  menu.addEventListener('click', (event) => {
+    if (event.target.tagName === 'A') {
+        menu.classList.remove('show');
+    }
+  });
+
+  document.addEventListener('click', (event) => {
+    if (!menu.contains(event.target) && !hamburger.contains(event.target)) {
+        menu.classList.remove('show');
+    }
   });
 }
 
