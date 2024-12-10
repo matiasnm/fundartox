@@ -27,7 +27,7 @@
 
 @font-face {
     font-family: 'IdealSans'; 
-    src: url('/fundartox/assets/fonts/IdealSans-Thin-Pro.otf'); /*/fundartox/*/
+    src: url('/assets/fonts/IdealSans-Thin-Pro.otf'); /*/fundartox/*/
 }
 
 html {
@@ -133,6 +133,12 @@ input {
 }
 .pr-2 {
     padding-right: 2rem;
+}
+.pr-3 {
+    padding-right: 3rem;
+}
+.pr-4 {
+    padding-right: 4rem;
 }
 .pt-1 {
     padding-top: 1rem;
@@ -521,7 +527,32 @@ section .card.figure-l.hero div {
     margin-top: 1rem;
     margin-bottom: 1rem;
 }
+
+@media (min-width: 1152px) and (max-width: 1279px) {
+    .home {
+        width: 85%!important;
+    }
+    .home .pr-4 {
+        padding-right: 3rem!important;
+    }
+}
+@media (min-width: 1024px) and (max-width: 1152px) {
+    .home {
+        width: 90%!important;
+    }
+    .home p {
+        font-size: 1rem;
+        margin-top: 1rem;
+        line-height: 1rem;
+    }
+    .home .pr-4 {
+        padding-right: 2rem!important;
+    }
+}
 @media (max-width: 1024px) {
+    .home .flex-row {
+        flex-direction: column;
+    }
     .services div {
         flex-direction: column;
     }
@@ -530,6 +561,9 @@ section .card.figure-l.hero div {
     }
 }
 @media (max-width: 768px) {
+    .home-logo {
+        display: none;
+    }
     .about div {
         flex-direction: column;
     }
